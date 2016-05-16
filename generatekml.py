@@ -1,4 +1,4 @@
-
+import random
 import os
 import urllib2
 import urllib
@@ -65,7 +65,7 @@ for fi in range(0,4):
                                         <name>""" + cl[0].title() + """</name>
                                         <description>Car in Bike Lane on """+date+"""</description>
                                         <Point>
-                                        <coordinates>""" +cl[2]+","+cl[1]+"""</coordinates>
+                                        <coordinates>""" +"%.9f"%(float(cl[2])+random.random()*5e-5)+","+"%.9f"%(float(cl[1])+random.random()*5e-5)+"""</coordinates>
                                         </Point>
                                         </Placemark>
                                         """)
